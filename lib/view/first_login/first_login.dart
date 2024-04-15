@@ -1,5 +1,10 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:vehicle_rental_app/utils/color_constants/color_constants.dart';
+import 'package:vehicle_rental_app/view/home_page/home_page.dart';
+import 'package:vehicle_rental_app/view/lottie_sample_screen/lottie_sample_screen.dart';
+import 'package:vehicle_rental_app/view/register_screen/register_screen.dart';
 
 class FirstLogin extends StatefulWidget {
   const FirstLogin({Key? key}) : super(key: key);
@@ -16,7 +21,7 @@ class _FirstLoginState extends State<FirstLogin> {
         screenHeight * 0.2; // Adjust this percentage as needed
 
     return Scaffold(
-      backgroundColor: ColorConstants.lightPurple,
+      // backgroundColor: ColorConstants.lightPurple,
       body: Container(
         padding:
             EdgeInsets.symmetric(horizontal: 50, vertical: verticalPadding),
@@ -25,9 +30,9 @@ class _FirstLoginState extends State<FirstLogin> {
           gradient: LinearGradient(
             colors: [
               ColorConstants.mainBlack,
-              ColorConstants.maingreen,
+              ColorConstants.mainbackgroundgreen,
               ColorConstants.mainBlack,
-              ColorConstants.maingreen,
+              ColorConstants.mainbackgroundgreen,
             ],
             begin: Alignment.bottomRight,
             end: Alignment.topLeft,
@@ -71,7 +76,13 @@ class _FirstLoginState extends State<FirstLogin> {
                   ],
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => LottieSampleScreen(),
+                        ));
+                  },
                   child: Text(
                     "Login",
                     style: TextStyle(color: Colors.white),
@@ -88,7 +99,15 @@ class _FirstLoginState extends State<FirstLogin> {
                         "Doesn't have an account?",
                         style: TextStyle(color: Colors.white),
                       ),
-                      TextButton(onPressed: () {}, child: Text("click here"))
+                      TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => RegisterScreen(),
+                                ));
+                          },
+                          child: Text("click here"))
                     ],
                   ),
                 )

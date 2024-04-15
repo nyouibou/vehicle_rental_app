@@ -30,6 +30,10 @@ class _SplashScreenState extends State<SplashScreen> {
                   fit: BoxFit.fill,
                 ),
                 Image.asset(
+                  Imageconstants.scooty,
+                  fit: BoxFit.fill,
+                ),
+                Image.asset(
                   Imageconstants.carTwo,
                   fit: BoxFit.fill,
                 ),
@@ -38,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   fit: BoxFit.fill,
                 ),
                 Image.asset(
-                  Imageconstants.scooty,
+                  Imageconstants.scootytwo,
                   fit: BoxFit.fill,
                 ),
               ],
@@ -80,7 +84,7 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: ColorConstants.maingreen,
+                  color: ColorConstants.mainbackgroundgreen,
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Text(

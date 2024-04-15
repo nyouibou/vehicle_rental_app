@@ -5,6 +5,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:vehicle_rental_app/utils/color_constants/color_constants.dart';
+import 'package:vehicle_rental_app/view/bottom_bar_page/bottom_bar_page.dart';
 import 'package:vehicle_rental_app/view/home_page/home_page.dart';
 
 class LottieSampleScreen extends StatefulWidget {
@@ -18,15 +19,15 @@ class _LottieSampleScreenState extends State<LottieSampleScreen> {
   @override
   void initState() {
     Timer(Duration(seconds: 3), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (context) => HomePage(),
-      ));
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => BottomBar()));
     });
     super.initState();
   }
 
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ColorConstants.mainbackgroundgreen,
       body: Center(
         child: ListView(
           children: [
@@ -35,7 +36,7 @@ class _LottieSampleScreenState extends State<LottieSampleScreen> {
               child: Text(
                 "Find your Vehicle!",
                 style: TextStyle(
-                    color: ColorConstants.mainBlack,
+                    color: ColorConstants.mainWhite,
                     fontSize: 30,
                     fontWeight: FontWeight.bold),
               ),
