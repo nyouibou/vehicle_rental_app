@@ -15,65 +15,69 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorConstants.mainBlack,
+      backgroundColor: ColorConstants.mainWhite,
       body: Stack(
         children: [
-          Positioned.fill(
-            child: CarouselSlider(
-              items: [
-                Image.asset(
-                  Imageconstants.carOne,
-                  fit: BoxFit.fill,
-                ),
-                Image.asset(
-                  Imageconstants.bikeOne,
-                  fit: BoxFit.fill,
-                ),
-                Image.asset(
-                  Imageconstants.scooty,
-                  fit: BoxFit.fill,
-                ),
-                Image.asset(
-                  Imageconstants.carTwo,
-                  fit: BoxFit.fill,
-                ),
-                Image.asset(
-                  Imageconstants.bikeTwo,
-                  fit: BoxFit.fill,
-                ),
-                Image.asset(
-                  Imageconstants.scootytwo,
-                  fit: BoxFit.fill,
-                ),
-              ],
-              options: CarouselOptions(
-                autoPlayAnimationDuration: Duration(seconds: 1),
-                autoPlay: true,
-                viewportFraction: 1,
-                height: MediaQuery.of(context).size.height,
-              ),
-            ),
+          Center(
+            child: Image.asset("assets/images/applogo.jpg"),
           ),
-          Positioned(
-            left: 0,
-            right: 0,
-            bottom: 100,
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Text(
-                "Your Journey Starts Here. Rent. Drive. Explore.",
-                textAlign: TextAlign.justify,
-                style: TextStyle(
-                  color: ColorConstants.mainWhite,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                ),
-              ),
-            ),
-          ),
+          // Positioned.fill(
+          //   child: CarouselSlider(
+          //     items: [
+          //       Image.asset(
+          //         Imageconstants.carOne,
+          //         fit: BoxFit.fill,
+          //       ),
+          //       Image.asset(
+          //         Imageconstants.bikeOne,
+          //         fit: BoxFit.fill,
+          //       ),
+          //       Image.asset(
+          //         Imageconstants.scooty,
+          //         fit: BoxFit.fill,
+          //       ),
+          //       Image.asset(
+          //         Imageconstants.carTwo,
+          //         fit: BoxFit.fill,
+          //       ),
+          //       Image.asset(
+          //         Imageconstants.bikeTwo,
+          //         fit: BoxFit.fill,
+          //       ),
+          //       Image.asset(
+          //         Imageconstants.scootytwo,
+          //         fit: BoxFit.fill,
+          //       ),
+          //     ],
+          //     options: CarouselOptions(
+          //       autoPlayAnimationDuration: Duration(seconds: 1),
+          //       autoPlay: true,
+          //       viewportFraction: 1,
+          //       height: MediaQuery.of(context).size.height,
+          //     ),
+          //   ),
+          // ),
+          // Positioned(
+          //   left: 0,
+          //   right: 0,
+          //   bottom: 100,
+          //   child: Container(
+          //     padding: EdgeInsets.symmetric(horizontal: 20),
+          //     child: Text(
+          //       "Your Journey Starts Here. Rent. Drive. Explore.",
+          //       textAlign: TextAlign.justify,
+          //       style: TextStyle(
+          //         color: ColorConstants.mainBlack,
+          //         fontWeight: FontWeight.w700,
+          //         fontSize: 20,
+          //       ),
+          //     ),
+          //   ),
+          // ),
           Positioned(
             bottom: 20,
-            left: 30,
+            left: 60,
+            right: 60,
             child: InkWell(
               onTap: () => Navigator.pushReplacement(
                 context,
@@ -84,12 +88,14 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: ColorConstants.mainbackgroundgreen,
+                  color: ColorConstants.mainBlack,
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: Text(
-                  "Get Started...",
-                  style: TextStyle(color: ColorConstants.mainWhite),
+                child: Center(
+                  child: Text(
+                    "Get Started...",
+                    style: TextStyle(color: ColorConstants.mainWhite),
+                  ),
                 ),
               ),
             ),

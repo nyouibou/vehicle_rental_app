@@ -8,4 +8,5 @@ class ColorConstants {
   static Color mainbackgroundgreen = Color.fromARGB(255, 9, 36, 10);
 
   static Color lightgreen = Color.fromARGB(255, 22, 101, 25);
+  static Color mainash = Color(0xffCBD5C0);
 }

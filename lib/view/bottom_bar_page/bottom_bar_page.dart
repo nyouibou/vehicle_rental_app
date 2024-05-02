@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:vehicle_rental_app/utils/color_constants/color_constants.dart';
 import 'package:vehicle_rental_app/view/favs_page/favs_page.dart';
 import 'package:vehicle_rental_app/view/home_page/home_page.dart';
+import 'package:vehicle_rental_app/view/model_names_tab/modelnames.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({super.key});
@@ -13,22 +14,25 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
-  List page = [HomePage(), FavPage()];
+  // bottom nav pages
+  List page = [ModelNames(), FavPage()];
   int selectedindex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: ColorConstants.mainbackgroundgreen,
+          backgroundColor: ColorConstants.mainBlack,
           currentIndex: selectedindex,
-          selectedItemColor: ColorConstants.lightgreen,
-          unselectedItemColor: ColorConstants.mainWhite,
+          selectedItemColor: ColorConstants.mainWhite,
+          // selectedFontSize: BorderSide.strokeAlignCenter,
+          unselectedItemColor: ColorConstants.mainash,
           onTap: (value) {
             selectedindex = value;
 
             setState(() {});
           },
           type: BottomNavigationBarType.fixed,
+          selectedFontSize: 15,
           items: [
             BottomNavigationBarItem(
                 icon: Icon(

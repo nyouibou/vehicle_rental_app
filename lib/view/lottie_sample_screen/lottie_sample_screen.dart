@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:vehicle_rental_app/utils/color_constants/color_constants.dart';
 import 'package:vehicle_rental_app/view/bottom_bar_page/bottom_bar_page.dart';
-import 'package:vehicle_rental_app/view/home_page/home_page.dart';
 
 class LottieSampleScreen extends StatefulWidget {
   const LottieSampleScreen({super.key});
@@ -27,7 +26,7 @@ class _LottieSampleScreenState extends State<LottieSampleScreen> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorConstants.mainbackgroundgreen,
+      backgroundColor: ColorConstants.mainash,
       body: Center(
         child: ListView(
           children: [
@@ -36,7 +35,7 @@ class _LottieSampleScreenState extends State<LottieSampleScreen> {
               child: Text(
                 "Find your Vehicle!",
                 style: TextStyle(
-                    color: ColorConstants.mainWhite,
+                    color: ColorConstants.mainBlack,
                     fontSize: 30,
                     fontWeight: FontWeight.bold),
               ),
